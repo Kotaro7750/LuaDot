@@ -5,7 +5,13 @@ local DotEdge = require('./DotEdge')
 local LuaDot = {}
 
 function LuaDot:new(name,hasDirection)
-  obj = {hasDirection = hasDirection, name = name, node = Array:new(), edge = Array:new()}
+  obj = {
+    hasDirection = hasDirection,
+    name = name,
+    node = Array:new(),
+    edge = Array:new()
+  }
+
   self.__index = self
   return setmetatable(obj,self)
 end
