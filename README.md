@@ -7,8 +7,15 @@ LuaDot is a Lua module for creating DOT format graph easily.
 
 local LuaDot = require('./LuaDot')
 
--- Instanciate new graph whose ID is 'graph_example' and has direction
-local graph = LuaDot:new('graph_example', true)
+-- Instanciate new graph whose ID is 'graph_example' and has direction.
+-- Can specify graph,node,edge attribute
+local graph = LuaDot:new('graph_example',{
+  hasDirection = true,
+  graphAttribute = {
+    bgcolor = "#dcdddd",
+    fontcolor = "white",
+  },
+})
 
 -- Append node with some attribute
 graph:appendNode('node1', {
